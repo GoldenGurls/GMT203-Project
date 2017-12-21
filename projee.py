@@ -9,6 +9,9 @@ class Application(Frame):
         super(Application, self).__init__(master)
         self.create_widgets()
 
+    def addDictionary(self):
+        self.gui.addDictionary()
+
     def create_widgets(self):
         self.text1 = Text(width = 20, height = 20)
         self.text1.pack(expand=YES, fill=BOTH)         #to make the textbox fill entire window
