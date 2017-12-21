@@ -1,9 +1,10 @@
 from tkinter import *
 import tkinter.filedialog as tk
 import tkinter.messagebox as tk2
+from gui import *
 
 class Application(Frame):
-    
+
     def __init__(self,master):
         super(Application, self).__init__(master)
         self.create_widgets()
@@ -23,6 +24,7 @@ class Application(Frame):
         editmenu.add_command(label = 'Paste', command = self.paste)
         editmenu.add_command(label = 'Clear', command = self.clear)
         toolsmenu.add_command(label = 'Word Count', command = self.wordCount)
+        toolsmenu.add_command(label = "Add Dictionary", command = self.addDictionary)
         menubar.add_cascade(label = 'File', menu = filemenu)
         menubar.add_cascade(label = 'Edit', menu = editmenu)
         menubar.add_cascade(label = 'Tools', menu = toolsmenu)
@@ -30,15 +32,14 @@ class Application(Frame):
 
     def newDoc(self):
         if(tk2.askyesno("Message", "Unsaved work will be lost. Continue?")):
-            self.text1.delete("1.0", END)        
+            self.text1.delete("1.0", END)
 
     def saveDoc(self):
         savefile = tk.asksaveasfile(mode = 'w', defaultextension = ".txt")
         text2save = str(self.text1.get("1.0", END))
         savefile.write(text2save)
         savefile.close()
-        
-        
+
     def openDoc(self):
         openfile = tk.askopenfile(mode = 'r')
         text = openfile.read()
@@ -50,7 +51,6 @@ class Application(Frame):
         var = str(self.text1.get(SEL_FIRST,SEL_LAST))
         self.clipboard_clear()
         self.clipboard_append(var)
-    
 
     def paste(self):
         #Insert the clipboard text into the textbox
