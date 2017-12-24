@@ -1,0 +1,152 @@
+from tkinter import *
+from PIL import Image, ImageTk
+import os
+
+# Locating the python directory
+path = os.path.abspath(os.path.dirname(__file__))
+
+mainWindow = Tk()
+mainWindow.wm_title("Short Stories for Children")
+mainWindow.attributes("-fullscreen", True)
+
+def story():
+
+    # Creating my frames
+    bannerFrame = Frame(mainWindow)
+    storyFrame = Frame(mainWindow)
+
+    # ADDING IMAGES
+
+    rapunzel = Image.open(path + "\\images\\rapunzel.png")
+    photo1 = ImageTk.PhotoImage(rapunzel)
+    label1 = Label(storyFrame, image=photo1)
+    label1.rapunzel = photo1 # keep a reference
+    button1 = Button(mainWindow, text="Rapunzel", command=callback)
+
+    cinderella = Image.open(path + "\\images\\cinderella.png")
+    photo2 = ImageTk.PhotoImage(cinderella)
+    label2 = Label(image=photo2)
+    label2.cinderella = photo2
+    button2 = Button(mainWindow, text="Cinderella", command=callback)
+
+    sleepingBeauty = Image.open(path + "\\images\\sleepingBeauty.png")
+    photo3 = ImageTk.PhotoImage(sleepingBeauty)
+    label3 = Label(image=photo3)
+    label3.rapunzel = photo3
+    button3 = Button(mainWindow, text="Sleeping Beauty", command=callback)
+
+    snowQeen = Image.open(path + "\\images\\snowQeen.png")
+    photo4 = ImageTk.PhotoImage(snowQeen)
+    label4 = Label(image=photo4)
+    label4.rapunzel = photo4
+    button4 = Button(mainWindow, text="Snow Queen", command=callback)
+
+    snowWhite = Image.open(path + "\\images\\snowWhite.png")
+    photo5 = ImageTk.PhotoImage(snowWhite)
+    label5 = Label(image=photo5)
+    label5.rapunzel = photo5
+    button5 = Button(mainWindow, text="Snow White", command=callback)
+
+    pussInBoots = Image.open(path + "\\images\\pussInBoots.png")
+    photo6 = ImageTk.PhotoImage(pussInBoots)
+    label6 = Label(image=photo6)
+    label6.rapunzel = photo6
+    button6 = Button(mainWindow, text="Puss in Boots", command=callback)
+
+    redRidingHood = Image.open(path + "\\images\\redRidingHood.png")
+    photo7 = ImageTk.PhotoImage(redRidingHood)
+    label7 = Label(image=photo7)
+    label7.rapunzel = photo7
+    button7 = Button(mainWindow, text="Little Red Riding Hood", command=callback)
+
+    littleMermaid = Image.open(path + "\\images\\littleMermaid.png")
+    photo8 = ImageTk.PhotoImage(littleMermaid)
+    label8 = Label(image=photo8)
+    label8.rapunzel = photo8
+    button8 = Button(mainWindow, text="Little Mermaid", command=callback)
+
+    matchGirl = Image.open(path + "\\images\\matchGirl.png")
+    photo9 = ImageTk.PhotoImage(matchGirl)
+    label9 = Label(image=photo9)
+    label9.matchGirl = photo9
+    button9 = Button(mainWindow, text="Little Match Girl", command=callback)
+
+    happyPrince = Image.open(path + "\\images\\happyPrince.png")
+    photo10 = ImageTk.PhotoImage(happyPrince)
+    label10 = Label(image=photo10)
+    label10.happyPrince = photo10
+    button10 = Button(mainWindow, text="Happy Prince0", command=callback)
+
+    hanselAndGratel = Image.open(path + "\\images\\hanselAndGratel.png")
+    photo11 = ImageTk.PhotoImage(hanselAndGratel)
+    label11 = Label(image=photo11)
+    label11.hanselAndGratel = photo11
+    button11 = Button(mainWindow, text="Hansel and Gratel", command=callback)
+
+    bremen = Image.open(path + "\\images\\bremen.png")
+    photo12 = ImageTk.PhotoImage(bremen)
+    label12 = Label(image=photo12)
+    label12.bremen = photo12
+    button12 = Button(mainWindow, text="The Bremen Town Musicians", command=callback)
+
+    antAndGrasshopper = Image.open(path + "\\images\\antAndGrasshopper.png")
+    photo13 = ImageTk.PhotoImage(antAndGrasshopper)
+    label13 = Label(image=photo13)
+    label13.antAndGrasshopper = photo13
+    button13 = Button(mainWindow, text="The Ant and The Grasshopper ", command=callback)
+
+    thumbelina = Image.open(path + "\\images\\thumbelina.png")
+    photo14 = ImageTk.PhotoImage(thumbelina)
+    label14 = Label(image=photo14)
+    label14.thumbelina = photo14
+    button14 = Button(mainWindow, text="Thumbelina", command=callback)
+
+    aliBaba = Image.open(path + "\\images\\aliBaba.png")
+    photo15 = ImageTk.PhotoImage(aliBaba)
+    label15 = Label(image=photo15)
+    label15.aliBaba = photo15
+    button15 = Button(mainWindow, text="Ali Baba and Forty Thieves", command=callback)
+
+    bannerFrame.grid(row=0, column=0)
+    storyFrame.grid(row=1, column=1)
+
+    #Adding labels of the story images
+    label1.grid(row=1, column=1)
+    label2.grid(row=1, column=2)
+    label3.grid(row=1, column=3)
+    label4.grid(row=1, column=4)
+    label5.grid(row=1, column=5)
+    label6.grid(row=1, column=6)
+    label7.grid(row=3, column=1)
+    label8.grid(row=3, column=2)
+    label9.grid(row=3, column=3)
+    label10.grid(row=3, column=4)
+    label11.grid(row=3, column=5)
+    label12.grid(row=3, column=6)
+    label13.grid(row=5, column=1)
+    label14.grid(row=5, column=2)
+    label15.grid(row=5, column=3)
+
+    #Adding buttons for all of the stories
+    button1.grid(row=2, column=1)
+    button2.grid(row=2, column=2)
+    button3.grid(row=2, column=3)
+    button4.grid(row=2, column=4)
+    button5.grid(row=2, column=5)
+    button6.grid(row=2, column=6)
+    button7.grid(row=4, column=1)
+    button8.grid(row=4, column=2)
+    button9.grid(row=4, column=3)
+    button10.grid(row=4, column=4)
+    button11.grid(row=4, column=5)
+    button12.grid(row=4, column=6)
+    button13.grid(row=6, column=1)
+    button14.grid(row=6, column=2)
+    button15.grid(row=6, column=3)
+
+    mainWindow.mainloop()
+
+def callback():
+    mainWindow.destroy()
+
+story()
