@@ -11,20 +11,16 @@ mainWindow.attributes("-fullscreen", True)
 
 def story():
 
-    # Creating my frames
-    bannerFrame = Frame(mainWindow)
-    storyFrame = Frame(mainWindow)
-
     # ADDING IMAGES
 
     banner = Image.open(path + "\\images\\banner.png")
     bannerPhoto = ImageTk.PhotoImage(banner)
-    bannerLabel = Label(storyFrame, image=bannerPhoto)
+    bannerLabel = Label(image=bannerPhoto)
     bannerLabel.banner = bannerPhoto
 
     rapunzel = Image.open(path + "\\images\\rapunzel.png")
     photo1 = ImageTk.PhotoImage(rapunzel)
-    label1 = Label(storyFrame, image=photo1)
+    label1 = Label(image=photo1)
     label1.rapunzel = photo1 # keep a reference
     button1 = Button(mainWindow, text="Rapunzel", command=callback)
 
@@ -112,21 +108,18 @@ def story():
     label15.aliBaba = photo15
     button15 = Button(mainWindow, text="Ali Baba and Forty Thieves", command=callback)
 
-    bannerFrame.grid(row=0, column=0)
-    storyFrame.grid(row=1, column=1)
-
     #Adding labels of the story images
     bannerLabel.grid(row=1, column=1, rowspan=2, columnspan=3)
     label1.grid(row=1, column=4)
     label2.grid(row=1, column=5)
     label3.grid(row=1, column=6)
-    label4.grid(row=3, column=1)
+    label4.grid(row=3, column=1, columnspan=1)
     label5.grid(row=3, column=2)
     label6.grid(row=3, column=3)
     label7.grid(row=3, column=4)
     label8.grid(row=3, column=5)
     label9.grid(row=3, column=6)
-    label10.grid(row=5, column=1)
+    label10.grid(row=5, column=1, columnspan=1)
     label11.grid(row=5, column=2)
     label12.grid(row=5, column=3)
     label13.grid(row=5, column=4)
@@ -137,13 +130,13 @@ def story():
     button1.grid(row=2, column=4)
     button2.grid(row=2, column=5)
     button3.grid(row=2, column=6)
-    button4.grid(row=4, column=1)
+    button4.grid(row=4, column=1, columnspan=1)
     button5.grid(row=4, column=2)
     button6.grid(row=4, column=3)
     button7.grid(row=4, column=4)
     button8.grid(row=4, column=5)
     button9.grid(row=4, column=6)
-    button10.grid(row=6, column=1)
+    button10.grid(row=6, column=1, columnspan=1)
     button11.grid(row=6, column=2)
     button12.grid(row=6, column=3)
     button13.grid(row=6, column=4)
