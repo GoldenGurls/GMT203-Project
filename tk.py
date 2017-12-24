@@ -2,38 +2,40 @@ from tkinter import*
 import tkinter.messagebox as tk
 import string
 
-class NewWindow():
-    def __init__(self):
-        self.main_window = Tk()
-        self.main_window.title('Short Stories for Children')
-        self.main_window.configure(background = '#E5E8E8')
-        self.main_window.geometry('500x500')
-        #self.label = Label(self.main_window, text = 'aa', background = 'white')
-        self.main_window.mainloop()
+main_window = Tk()
+main_window.title('Short Stories for Children')
+main_window.configure(background = '#E5E8E8')
+main_window.attributes('-fullscreen', True)
 
-    def create_widgets():
-        self.storyName = Text(width = 20, height = 20)
-        self.storyName.pack(expand=YES, fill=BOTH)
+def create_widgets():
+    storyName = Text(width = 20, height = 20)
+    storyName.pack(expand=YES, fill=BOTH)
 
-    def wordCount():
+def wordCount():
         #Get text from textbox and split it by whitespace characters into a list. Then find length of list
-        userText = self.storyName.get("1.0", END)
-        wordList = userText.split()
-        number_of_words = len(wordList)
-        tk2.showinfo('Word Count', 'Words:  ' + str(number_of_words))
+    userText = storyName.get("1.0", END)
+    wordList = userText.split()
+    number_of_words = len(wordList)
+    tk2.showinfo('Word Count', 'Words:  ' + str(number_of_words))
 
-    def letterCount():
-        userText = self.storyName.get("1.0", END)
-        wordList = userText.split()
-        characters = 0
-        for i in wordList:
-            characters += len(i)
+def letterCount():
+    userText = storyName.get("1.0", END)
+    wordList = userText.split()
+    characters = 0
+    for i in wordList:
+        characters += len(i)
 
-        print ("Number of characters in file:", characters)
+    print ("Number of characters in file:", characters)
+
+button1=Button(text='Word Count', background='pink', fg='dark green', font='Century 11 italic underline', command=wordCount)
+button2=Button(text='Letter Count', background='pink', fg='dark green', font='Century 11 italic underline', command=letterCount)
+button3=Button(text='Back', background='pink', fg='dark green', font='Century 11 italic underline', command=main_window.destroy)
+button1.grid(row = 0,column =1)
+button2.grid(row = 0,column =2)
+button3.grid(row = 0,column =0)
 
 
 
 
 
-
-NewWindow()
+mainloop()
