@@ -35,9 +35,8 @@ button1.grid(row = 0,column =1)
 button2.grid(row = 0,column =2)
 button3.grid(row = 0,column =0)
 
-textFrame = Frame(storyWindow, background="#FECBDB")
-textFrame.columnconfigure(0, weight=1)
-textFrame.grid(row=1)
+textFrame = Frame(storyWindow, background="#FECBDB", height=500, width=700)
+textFrame.grid(row=1, columnspan=5, rowspan=3)
 
 def printStory(storyName):
     """storyImage = Image.open(path + "\\images\\" + storyName + ".png")

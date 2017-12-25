@@ -108,6 +108,7 @@ def main():
     label15.aliBaba = photo15
     button15 = Button(mainWindow, text="Ali Baba and Forty Thieves", command= lambda: callback("aliBaba"))
 
+    #Adding the exit button
     exitButon = Button(mainWindow, text = "Quit!", command = lambda: mainWindow.destroy())
 
     #Adding labels of the story images
