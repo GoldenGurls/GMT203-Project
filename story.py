@@ -12,6 +12,7 @@ storyWindow.title('Short Stories for Children')
 storyWindow.configure(background = '#FECBDB')
 storyWindow.attributes('-fullscreen', True),
 
+    
 def wordCount(storyName):
     #Get text from textbox and split it by whitespace characters into a list.
     #Then find length of list
@@ -42,7 +43,7 @@ def printStory(storyName):
     label.storyImage = photo"""
 
     infile = open(path + "\\stories\\" + storyName + ".txt", "r")
-    storyText = infile.readline()
+    storyText = infile.readlines()
     textLabel = Label(storyWindow, text=storyText, background='#FECBDB').grid(row=1)
 
     mainloop()
