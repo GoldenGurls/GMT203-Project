@@ -35,12 +35,10 @@ button1.grid(row = 0,column =1)
 button2.grid(row = 0,column =2)
 button3.grid(row = 0,column =0)
 
-mainloop()
-
 def printStory(storyName):
     storyImage = Image.open(path + "\\images\\" + storyName + ".png")
     photo = ImageTk.PhotoImage(storyImage)
-    label = Label(storyWindow, image=photo)
+    label = Label(image=photo)
     label.storyImage = photo
 
     infile = open(path + "\\stories\\" + storyName + ".txt", "r")
@@ -52,6 +50,8 @@ def printStory(storyName):
             rowNum = rowNum + 1
     except:
         pass
+
+mainloop()
 
 """
 def readStory(storyName):
