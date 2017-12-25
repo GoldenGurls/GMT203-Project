@@ -8,18 +8,20 @@ path = os.path.abspath(os.path.dirname(__file__))
 
 storyWindow = Tk()
 storyWindow.title('Short Stories for Children')
-storyWindow.configure(background = '#E5E8E8')
+storyWindow.configure(background = '#FECBDB')
 storyWindow.attributes('-fullscreen', True)
 
-button1=Button(text='Word Count', background='pink', fg='dark green', \
-    font='Century 11 italic underline', command= lambda: wordCount(storyName))
-button2=Button(text='Letter Count', background='pink', fg='dark green', \
-    font='Century 11 italic underline', command= lambda: letterCount(storyName))
-button3=Button(text='Back', background='pink', fg='dark green', \
-    font='Century 11 italic underline', command= lambda: storyWindow.destroy)
-button1.grid(row = 0,column =1)
-button2.grid(row = 0,column =2)
-button3.grid(row = 0,column =0)
+def printWidgets(storyName):
+    button1=Button(text='Word Count', background='pink', fg='dark green', \
+        font='Century 11 italic underline', command= lambda: wordCount(storyName))
+    button2=Button(text='Letter Count', background='pink', fg='dark green', \
+        font='Century 11 italic underline', command= lambda: letterCount(storyName))
+    button3=Button(text='Back', background='pink', fg='dark green', \
+        font='Century 11 italic underline', command= lambda: storyWindow.destroy)
+    button1.grid(row = 0,column =1)
+    button2.grid(row = 0,column =2)
+    button3.grid(row = 0,column =0)
+
 
 def printStory(storyName):
     infile = open(path + "\\stories\\" + storyName + ".txt", "r")
