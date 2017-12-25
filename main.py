@@ -147,7 +147,6 @@ def main():
 
 def callback(storyName):
     import story
-    story.printWidgets(storyName)
     story.printStory(storyName)
 
 main()
