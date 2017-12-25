@@ -1,19 +1,23 @@
 from tkinter import *
 import tkinter.filedialog as tk
 import tkinter.messagebox as tk2
+import os
 
 class Application(Frame):
 
     def __init__(self,master):
         super(Application, self).__init__(master)
-        self.create_widgets()
+        #self.create_widgets()
+        # Locating the python directory
+        path = os.path.abspath(os.path.dirname(__file__))
 
     def addDictionary(self):
         self.gui.addDictionary()
 
+        """
     def create_widgets(self):
         self.text1 = Text(width = 20, height = 20)
-        self.text1.pack(expand=YES, fill=BOTH)         #to make the textbox fill entire window
+        self.text1.pack(expand=YES, fill=BOTH) """        #to make the textbox fill entire window
 
         menubar = Menu(self)
         filemenu = Menu(menubar)
@@ -75,11 +79,16 @@ class Application(Frame):
         for i in wordList:
             characters += len(i)
         tk2.showinfo('Letter Count', 'Letter:  ' + str(characters))
-    """def printStory(self):
-        infile = open(path + "\\stories\\" + storyName + ".txt", "r")
-        storyText = Label(storyWindow, text=infile).pack()"""   
-           
-    
+
+    def printStory(self, storyName):
+        self.infile = open(path + "\\stories\\" + storyName + ".txt", "r")
+        #storyText = Label(storyWindow, text=infile).grid()
+        #openfile = tk.askopenfile(mode = 'r')
+        self.storyText = self.infile.read()
+        self.text1.insert(END, self.storyText)
+        self.infile.close()
+
+
 
 root = Tk()
 root.title('Text Editor')

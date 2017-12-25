@@ -150,7 +150,7 @@ def main():
     mainWindow.mainloop()
 
 def callback(storyName):
-    import story
-    story.printStory(storyName)
+    from projee import printStory
+    printStory(storyName)
 
 main()
