@@ -1,5 +1,6 @@
 from tkinter import*
 import tkinter.messagebox as tk
+from PIL import Image, ImageTk
 import string
 import os
 
@@ -10,20 +11,6 @@ storyWindow = Toplevel()
 storyWindow.title('Short Stories for Children')
 storyWindow.configure(background = '#FECBDB')
 storyWindow.attributes('-fullscreen', True),
-
-def printStory(storyName):
-    infile = open(path + "\\stories\\" + storyName + ".txt", "r")
-    storyText = Label(storyWindow, text=infile).grid()
-
-    storyImage = Image.open(path + "\\images\\" + storyName + ".png")
-    photo = ImageTk.PhotoImage(storyImage)
-    label = Label(image=photo)
-    label.storyImage = photo
-
-"""
-def createWidgets(storyName):
-    storyName = Text(width = 20, height = 20)
-    storyName.pack(expand=YES, fill=BOTH)"""
 
 def wordCount(storyName):
     #Get text from textbox and split it by whitespace characters into a list.
@@ -48,6 +35,24 @@ button1.grid(row = 0,column =1)
 button2.grid(row = 0,column =2)
 button3.grid(row = 0,column =0)
 
+mainloop()
+
+def printStory(storyName):
+    storyImage = Image.open(path + "\\images\\" + storyName + ".png")
+    photo = ImageTk.PhotoImage(storyImage)
+    label = Label(storyWindow, image=photo)
+    label.storyImage = photo
+
+    infile = open(path + "\\stories\\" + storyName + ".txt", "r")
+    rowNum=1
+    try:
+        for i in range(100):
+            storyText = infile.readline()
+            Label(storyWindow, text=storyText, background='#FECBDB').grid(row=rowNum)
+            rowNum = rowNum + 1
+    except:
+        pass
+
 """
 def readStory(storyName):
     userText = storyName.get("1.0", END)
@@ -59,5 +64,3 @@ def readStory(storyName):
         engine.setProperty('voice', voice.id)
         engine.say(userText)
     engine.runAndWait()"""
-
-mainloop()
