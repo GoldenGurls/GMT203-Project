@@ -1,14 +1,16 @@
 def Dictionary():
-    Siyaset = ['TBMM','politika', 'bakanlık','konsolosluk','devlet','Cumhurbaşkanı',
-    'sınır bölgesi','çözüm süreci','sınır ötesi','Lider','Ankara','Bakan','Siyasi Lider']
-    Astroloji = ['Koç','Boğa','İkizler','Yengeç','Aslan','Başak','Terazi','Akrep',
-    'Yay','Oğlak','Kova','Balık','yükselen','uyum','Astrolog','astroloji']
-    Ekonomi = ['büyüme','enflasyon','banka','Bankası','Şirketi','şirket','iş dünyası','yolsuzluk'
-    'dünyası','Koç','Sabancı','Holding','kriz','ekonomi','Dolar','Altın','Döviz','Türk Lirası',
-    'Euro','kur','Wall Street']
-    Spor = ['derbi','maç','skor','müsabaka','liderlik','sporcu','Milli','Olimpiyat','madalya',
-    'saha','derece','berabere','yenilgi','galibiyet']
-    Magazin = ['sanatçı','ünlü isim','ihanet','trend','ünlü','oyuncu','sürpriz','aşk','skandal','dünyasının',
-    'tanınan isim','yeni','proje','ortak','dedikodu','aldattı','popcu','ünlüler','eski','şaşırttı','görenler']
-
-    
+    rapunzel = [tower, Tower, golden hair, Golden Hair, Witch, Prince, blonde hair, Blode hair, love, Love]
+    cinderella = [stepsisters, Stepsisters,castle, Castle, stepmother, Stepmother,godmother, Godmother, wand, midnight, prince, Prince, shoe, Shoe]
+    sleepingBeauty = [evil fairy, Evil fairy, castle, Castle, big party, curse, Curse, true love, spindle, kingdom, Kingdom, princess, Princess, prince, Prince, kiss, sleep, sleeping, ]
+    snowQeen = [wizard, Wizard, cold, Cold, ice, Ice, friendship, snowflakes, mirror, Mirror, frozen, Frozen, city, City, Kingdom, Queen, queen,  ]
+    snowWhite = [stepmother, Stepmother, mirror, Mirror, Evil witch, evil witch, hunter, Hunter, seven dwarfs, Seven dwarfs, apple, glass coffin, castle, forest, dwarf’s house, prince, Prince]
+    pussInBoots = [woods, Woods, carriage, Carriage, river, River, castle, Castle, mill, Mill, Cat, Miller, his sons, King, king, princess, Princess, boots, Marquis of Carabas]
+    redRidingHood = [grandma, Grandma, Forest, forest, wolf, Wolf, woods, Woods, house, House,]
+    littleMermaid = [under the sea, castle, Castle, sea, Sea, sisters, prince, witch, Prince, Witch, Mermaid, mermaid]
+    matchGirl = [cold, Cold, Winter, winter, poor, girl, Girl, matches, Match, match, grandma, the boy, passengers, father, Father, Grandma]
+    happyPrince = [fall, fall, winter, Winter, square, Square, Street, street, Prince, prince, statue, Statue, Bird, bird, sword, Sword, Swallow, Happy Prince]
+    hanselAndGratel = [witch, Witch, Kids, kids, father, Father, Evil witch, Witch, witch, brother, sister, forest, Forest, house, House, cake, Bread, stepmother, Stepmother, stones, oven]
+    bremen = [animals, Animals, donkey, Donkey, dog, Dog, cat, Cat, rooster, Rooster, shack, Shack, Bremen, sing, animal,]
+    antAndGrasshopper = [summer, Summer, winter, Winter, sunshine, music]
+    thumbelina = [little, Little, girl, frog, mouse, prince, Prince, love, flower, creek, garden, butterfly, Butterfly, mole, Mole, swallow, king, King, flowers]
+    aliBaba = [Forty, Thieves, fortune, Fortune, magical, portal, gold, Gold, wi0fe, word]
