@@ -108,8 +108,11 @@ def main():
     label15.aliBaba = photo15
     button15 = Button(mainWindow, text="Ali Baba and Forty Thieves", command= lambda: callback("aliBaba"))
 
+    exitButon = Button(mainWindow, text = "Quit!", command = lambda: mainWindow.destroy())
+
     #Adding labels of the story images
-    bannerLabel.grid(row=1, column=1, rowspan=2, columnspan=3)
+    bannerLabel.grid(row=1, column=1, rowspan=1, columnspan=3)
+    exitButon.grid(row=2, column=1, rowspan=1, columnspan=3)
     label1.grid(row=1, column=4)
     label2.grid(row=1, column=5)
     label3.grid(row=1, column=6)

@@ -10,7 +10,7 @@ path = os.path.abspath(os.path.dirname(__file__))
 storyWindow = Toplevel()
 storyWindow.title('Short Stories for Children')
 storyWindow.configure(background = '#FECBDB')
-storyWindow.attributes('-fullscreen', True),
+storyWindow.attributes('-fullscreen', True)
 
 def wordCount(storyName):
     #Get text from textbox and split it by whitespace characters into a list.
@@ -35,6 +35,10 @@ button1.grid(row = 0,column =1)
 button2.grid(row = 0,column =2)
 button3.grid(row = 0,column =0)
 
+textFrame = Frame(storyWindow, background="#FECBDB")
+textFrame.columnconfigure(0, weight=1)
+textFrame.grid(row=1)
+
 def printStory(storyName):
     """storyImage = Image.open(path + "\\images\\" + storyName + ".png")
     photo = ImageTk.PhotoImage(storyImage)
@@ -42,8 +46,9 @@ def printStory(storyName):
     label.storyImage = photo"""
 
     infile = open(path + "\\stories\\" + storyName + ".txt", "r")
-    storyText = infile.readline()
-    textLabel = Label(storyWindow, text=storyText, background='#FECBDB').grid(row=1)
+    storyText = infile.readlines()
+    toPrint = storyText + ["\n"]
+    textLabel = Label(textFrame, text=toPrint, background='#FECBDB').grid()
 
     mainloop()
 
