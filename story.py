@@ -36,22 +36,16 @@ button2.grid(row = 0,column =2)
 button3.grid(row = 0,column =0)
 
 def printStory(storyName):
-    storyImage = Image.open(path + "\\images\\" + storyName + ".png")
+    """storyImage = Image.open(path + "\\images\\" + storyName + ".png")
     photo = ImageTk.PhotoImage(storyImage)
     label = Label(image=photo)
-    label.storyImage = photo
+    label.storyImage = photo"""
 
     infile = open(path + "\\stories\\" + storyName + ".txt", "r")
-    rowNum=1
-    try:
-        for i in range(100):
-            storyText = infile.readline()
-            Label(storyWindow, text=storyText, background='#FECBDB').grid(row=rowNum)
-            rowNum = rowNum + 1
-    except:
-        pass
+    storyText = infile.readline()
+    textLabel = Label(storyWindow, text=storyText, background='#FECBDB').grid(row=1)
 
-mainloop()
+    mainloop()
 
 """
 def readStory(storyName):
